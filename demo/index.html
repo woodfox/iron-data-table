@@ -26,7 +26,7 @@
       <template>
         <template is="dom-bind">
           <iron-ajax url="users.json" last-response="{{users}}" auto></iron-ajax>
-          <iron-data-table items="[[users.results]]">
+          <iron-data-table items="[[users.results]]" page-size=200>
             <data-table-column name="Picture" width="50px" flex="0">
               <template>
                 <img src="[[item.user.picture.thumbnail]]" />
